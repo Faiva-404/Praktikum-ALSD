@@ -18,13 +18,5 @@ public class MataKuliahMain09 {
         mk1.tambahJam(2);
         mk1.kurangiJam(1);
         mk1.tampilkanInformasi();
-
-        MataKuliah09 mk2 = new MataKuliah09("BD02TIE", "Basis Data", 3, 4 );
-        mk2.tampilkanInformasi();
-
-        mk2.ubahSKS(3);
-        mk2.tambahJam(1);
-        mk2.kurangiJam(2);
-        mk2.tampilkanInformasi();
     }
 }
