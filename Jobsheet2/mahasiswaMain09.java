@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class mahasiswaMain09 {
-   public static void main(String[] args){
+   public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String nama;
         String nim;
@@ -21,5 +21,9 @@ public class mahasiswaMain09 {
         mahasiswa09 mhs2 = new mahasiswa09("Annisa Nabila","2141720160", 3.35, "TI 2L");
         mhs2.updateIpk(3.30);
         mhs2.tampilkanInformasi();
+
+        mahasiswa09 mhsFaiva = new mahasiswa09("Faiva Puspa", "244107020036", 3.75, "TI 1E");
+        mhsFaiva.updateIpk(3.75);
+        mhsFaiva.tampilkanInformasi();
    }
 }

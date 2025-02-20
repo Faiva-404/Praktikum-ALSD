@@ -3,9 +3,6 @@ public class mahasiswa09 {
     String nim;
     String kelas;
     Double ipk;
-
-    
-    mahasiswa09 mhsFaivaPuspa = new mahasiswa09("Faiva Puspa", "244107020036", 3.75, "TI 1E");
     
     void tampilkanInformasi () {
         System.out.println("Nama: " + nama);
