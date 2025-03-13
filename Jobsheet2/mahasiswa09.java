@@ -23,7 +23,7 @@ public class mahasiswa09 {
         }
     }
 
-    String ninaiKinerja () {
+    String nilaiKinerja () {
         if (ipk >= 3.5) {
             return "Kinerja sangat baik";
         } else if (ipk >= 3.0) {
@@ -42,9 +42,9 @@ public class mahasiswa09 {
 
     //konstruktor berparameter
     public mahasiswa09(String nm, String nim, double ipk, String kls) {
-        nama = nm;
+        this.nama = nm;
         this.nim = nim;
         this.ipk = ipk;
-        kelas = kls;  
+        this.kelas = kls;  
     }
 }
