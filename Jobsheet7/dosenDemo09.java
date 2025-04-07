@@ -13,7 +13,9 @@ public class dosenDemo09 {
             System.out.println("2. Tampilkan Data Dosen");
             System.out.println("3. Sorting ASC (Usia Termuda ke Tertua)");
             System.out.println("4. Sorting DSC (Usia Tertua ke Termuda)");
-            System.out.println("5. Keluar");
+            System.out.println("5. Mencari Nama Dosen");
+            System.out.println("6. Mencari Usia Dosen");
+            System.out.println("7. Keluar");
             System.out.print("Pilih Menu : ");
             pilihan = sc.nextInt();
             sc.nextLine();
@@ -26,13 +28,13 @@ public class dosenDemo09 {
                         String kode = sc.nextLine();
                         System.out.print("Masukkan nama dosen: ");
                         String nama = sc.nextLine();
-                        System.out.print("Masukkan jenis Kelamin (Perempuan / Laki-laki) : ");
+                        System.out.print("Masukkan jenis Kelamin (P / L) : ");
                         char jk = sc.next().charAt(0);
                         boolean jenisKelamin = (jk == '1' || jk == 'p');
                         System.out.print("Masukkan usia dosen: ");
                         int usia = sc.nextInt();
                         sc.nextLine();
-                        System.out.println("-------------------------------------------------------------");
+                        System.out.println("-------------------------------------");
 
                         dosen09 dsn = new dosen09(kode, nama, jenisKelamin, usia);
                         datadsn.tambah(dsn);
@@ -51,9 +53,20 @@ public class dosenDemo09 {
                     System.out.println("Data Dosen Telah Diurutkan Secara Descending");
                     datadsn.tampil();
                     break;
+                case 5:
+                    System.out.print("Masukkan nama dosen yang dicari: ");
+                    String namaCari = sc.nextLine();
+                    datadsn.pencarianDataSequential09(namaCari);
+                    break;
+                case 6:
+                    System.out.print("Masukkan usia dosen yang dicari: ");
+                    int usiaCari = sc.nextInt();
+                    sc.nextLine();
+                    datadsn.pencarianDataBinary09(usiaCari);
+                    break;
                 default:
                     System.out.println("Pilihan Tidak Valid. Silahkan Coba Lagi");
             }
-        }while (pilihan != 5);
+        }while (pilihan != 7);
     }
 }

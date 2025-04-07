@@ -23,7 +23,7 @@ public class MahasiswaDemo09 {
         }  
 
         list.tampil();
-        //melakukan pencarian data sequential
+        //melakukan pencarian data Binary
         System.out.println("-------------------------------------");
         System.out.println("Pencarian data");
         System.out.println("-------------------------------------");
