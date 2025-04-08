@@ -1,7 +1,7 @@
 package Jobsheet7;
 
 public class dataDosen09 {
-    dosen09[] dataDosen09 = new dosen09[10];
+    dosen09[] dataDosen09 = new dosen09[9];
     int idx;
 
     void tambah(dosen09 dsn) {
@@ -9,7 +9,7 @@ public class dataDosen09 {
             dataDosen09[idx] = dsn;
             idx++;
         }else {
-            System.out.println("Data Dosen SUdah Banyak!");
+            System.out.println("Data Dosen Sudah Penuh!");
         }
     }
 
@@ -35,7 +35,7 @@ public class dataDosen09 {
             }
         }
         if (jumlahHasil > 1) {
-            System.out.println("peringatan! Pastikan algoritma yang diterapkan sesuai dengan kasus yang diberikan!");
+            System.out.println("Peringatan! Pastikan algoritma yang diterapkan sesuai dengan kasus yang diberikan!");
         } else if (jumlahHasil == 0) {
             System.out.println("Data tidak ditemukan.");
         }

@@ -16,7 +16,7 @@ public class dosenDemo09 {
             System.out.println("5. Mencari Nama Dosen");
             System.out.println("6. Mencari Usia Dosen");
             System.out.println("7. Keluar");
-            System.out.print("Pilih Menu : ");
+            System.out.print("\nPilih Menu : ");
             pilihan = sc.nextInt();
             sc.nextLine();
 
@@ -65,8 +65,11 @@ public class dosenDemo09 {
                     datadsn.pencarianDataBinary09(usiaCari);
                     break;
                 default:
-                    System.out.println("Pilihan Tidak Valid. Silahkan Coba Lagi");
+                    System.out.println("Pilihan Tidak Valid. Silahkan Coba Lagi.");
             }
-        }while (pilihan != 7);
+        }
+        while (pilihan != 7);
+        System.out.println("Peringatan! Pastikan algoritma yang diterapkan sesuai dengan kasus yang diberikan!");
+
     }
 }
