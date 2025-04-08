@@ -1,25 +1,28 @@
 package Jobsheet7;
 
 import java.util.Scanner;
-public class MahasiswaDemo09 {     
-    public static void main(String[] args) { 
-        Scanner sc = new Scanner(System.in);  
-        MahasiswaBerprestasi09 list = new MahasiswaBerprestasi09(); 
-        int jumMhs = 5;
+public class MahasiswaDemo09 {
+    public static void main(String[] args) {  
+        Scanner sc = new Scanner(System.in); 
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        int jumMhs = sc.nextInt();
+        MahasiswaBerprestasi09 list = new MahasiswaBerprestasi09(jumMhs); 
 
         for (int i = 0; i < jumMhs; i++) {
             System.out.println("Masukkan Data Mahasiswa ke-" + (i + 1));
             System.out.print("NIM   : ");
-            String nim = sc.nextLine();
+            String nim = sc.next();
             System.out.print("Nama  : ");
-            String nama = sc.nextLine();
+            String nama = sc.next();
             System.out.print("Kelas : ");
-            String kelas = sc.nextLine();
+            String kelas = sc.next();
             System.out.print("IPK   : ");
-            String ip = sc.nextLine();
+            String ip = sc.next();
             Double ipk = Double.parseDouble(ip);
+            sc.nextLine();
             System.out.println("-------------------------------------");
-            list.tambah(new Mahasiswa09(nim, nama, kelas, ipk));
+            Mahasiswa09 mhs = new Mahasiswa09(nim, nama, kelas, ipk);
+            list.tambah(mhs);
         }  
 
         list.tampil();
@@ -31,7 +34,7 @@ public class MahasiswaDemo09 {
         System.out.print("IPK : ");
         double cari = sc.nextDouble();
         System.out.println("-------------------------------------");
-        System.out.println("menggunakan sequential searching");
+        System.out.println("Menggunakan sequential searching");
         System.out.println("-------------------------------------");
         double posisi2 = list.findBinarySearch(cari, 0, jumMhs-1);
         int pss2 = (int)posisi2;

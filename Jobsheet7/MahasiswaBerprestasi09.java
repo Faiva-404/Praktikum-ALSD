@@ -1,8 +1,13 @@
 package Jobsheet7;
 
 public class MahasiswaBerprestasi09 {
-    Mahasiswa09[] listMhs = new Mahasiswa09[5];
+    Mahasiswa09[] listMhs;
     int idx;
+
+    MahasiswaBerprestasi09(int jumMhs) {
+        listMhs = new Mahasiswa09[jumMhs];
+        idx = 0;
+    }
 
     void tambah (Mahasiswa09 m) {
         if (idx < listMhs.length) {
@@ -94,7 +99,7 @@ public class MahasiswaBerprestasi09 {
             mid = (left+right)/2;
             if (cari == listMhs[mid].ipk) {
                 return (mid);
-            } else if (listMhs[mid].ipk>cari) {
+            } else if (listMhs[mid].ipk>cari) { //ubah perbandingan
                 return findBinarySearch(cari, left, mid-1);
             } else {
                 return findBinarySearch(cari, mid+1, right);
