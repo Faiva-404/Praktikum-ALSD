@@ -93,4 +93,14 @@ public class AntriLayanan09 {
         size--;
         return mhs;
     }  
+
+    public void lihatAkhir() {
+        if (IsEmpty()) {
+            System.out.println("Antrian kosong");
+            return;
+        }
+        System.out.println("Antrian paling belakang: ");
+        System.out.println("NIM - NAMA - PRODI - KELAS");
+        data[rear].tampilkanData();
+    }
 }
