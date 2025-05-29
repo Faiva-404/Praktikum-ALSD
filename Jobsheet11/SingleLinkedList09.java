@@ -13,7 +13,7 @@ public class SingleLinkedList09 {
             System.out.println("Isi Linked List:");
             NodeMahasiswa09 tmp = head;
             while (tmp != null) {
-                System.out.printf("%-10s %-5s %.1f\n", tmp.data.nama, tmp.data.nim, tmp.data.ipk);
+                tmp.data.tampilInformasi();
                 tmp = tmp.next;
             }
             System.out.println("");
@@ -54,8 +54,7 @@ public class SingleLinkedList09 {
                 if (ndInput.next == null) {
                     tail = ndInput; 
                 }
-                break;
-                
+                break;   
             }
             temp = temp.next;
         } while (temp != null);
@@ -69,10 +68,6 @@ public class SingleLinkedList09 {
         } else {
             NodeMahasiswa09 temp = head;
             for (int i = 0; i < index - 1; i++) {
-                if (temp == null) {
-                    System.out.println("Indeks melebihi jumlah elemen");
-                    return;
-                }
                 temp = temp.next;
             }
             temp.next = new NodeMahasiswa09(input, temp.next);

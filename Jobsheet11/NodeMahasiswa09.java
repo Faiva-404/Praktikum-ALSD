@@ -6,6 +6,6 @@ public class NodeMahasiswa09 {
 
     public NodeMahasiswa09(Mahasiswa09 data, NodeMahasiswa09 next) {
         this.data = data;
-        this.next = null;
+        this.next = next;
     }
 }
