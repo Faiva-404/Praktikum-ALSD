@@ -61,6 +61,10 @@ public class DoubleLinkedList09 {
     }
 
     public void print() {
+        if (isEmpty()) {
+            System.out.println("List kosong!");
+            return;
+        }
         Node09 current = head;
         while (current != null) {
             current.data.tampil();
@@ -70,8 +74,10 @@ public class DoubleLinkedList09 {
 
     public void removeFirst() {
         if (isEmpty()) {
-            System.out.println("List kosong!");
-        } else if (head == tail) {
+            System.out.println("List kosong, tidak bisa dihapus.");
+            return;
+        } 
+        if (head == tail) { 
             head = tail = null;
         } else {
             head = head.next;
@@ -81,8 +87,10 @@ public class DoubleLinkedList09 {
 
     public void removeLast() {
         if (isEmpty()) {
-            System.out.println("List kosong!");
-        } else if (head == tail) {
+            System.out.println("List kosong, tidak bisa dihapus.");
+            return;
+        } 
+        if (head == tail) {
             head = tail = null;
         } else {
             tail = tail.prev;

@@ -11,10 +11,11 @@ public class DLLMain09 {
             System.out.println("\nMenu Double Linked List Mahasiswa");
             System.out.println("1. Tambah di Awal");
             System.out.println("2. Tambah di Akhir");
-            System.out.println("3. Hapus di awal");
+            System.out.println("3. Hapus di Awal");
             System.out.println("4. Hapus di Akhir");
             System.out.println("5. Tampilkan Data");
-            System.out.println("6. Cari Mahasiswa berdasakan NIM");
+            System.out.println("6. Cari Mahasiswa berdasarkan NIM");
+            System.out.println("7. Tambah Setelah NIM Tertentu"); // Tambahan menu insertAfter
             System.out.println("0. Keluar");
             System.out.print("Pilih menu: ");
             pilihan = sc.nextInt();
@@ -42,7 +43,13 @@ public class DLLMain09 {
                     } else {
                         System.out.println("Data tidak ditemukan.");  
                     }
-                }  
+                }
+                case 7 -> { // Implementasi insertAfter
+                    System.out.print("Masukkan NIM yang akan disisipkan setelahnya: ");
+                    String nim = sc.nextLine();
+                    Mahasiswa09 mhs = inputMahasiswa(sc);
+                    list.insertAfter(nim, mhs);
+                }
                 case 0 -> System.out.println("Keluar dari program.");
                 default -> System.out.println("Pilihan tidak valid!"); 
             }
