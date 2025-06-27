@@ -20,7 +20,7 @@ public class BinaryTree09 {
             Node09 parent = null;
             while (true) {
                 parent = current;
-                if (mahasiswa09.ipk < current.mahasiswa09.ipk) {
+                if (mahasiswa09.ipk < current.data.ipk) {
                     current = current.left;
                     if (current == null) {
                         parent.left = newNode;
@@ -41,10 +41,10 @@ public class BinaryTree09 {
         boolean result = false;
         Node09 current = root;
         while (current != null) {
-            if (current.mahasiswa09.ipk == ipk) {
+            if (current.data.ipk == ipk) {
                 result = true;
                 break;
-            } else if (ipk < current.mahasiswa09.ipk) {
+            } else if (ipk < current.data.ipk) {
                 current = current.right;
             } else {
                 current = current.left;
@@ -55,7 +55,7 @@ public class BinaryTree09 {
 
     public void traversePreOrder(Node09 node) {
         if (node != null) {
-            node.mahasiswa09.tampilInformasi();
+            node.data.tampilInformasi();
             traversePreOrder(node.left);
             traversePreOrder(node.right);
         }
@@ -64,20 +64,20 @@ public class BinaryTree09 {
     public void traverseInOrder(Node09 node) {
         if (node != null) {
             traverseInOrder(node.left);
-            node.mahasiswa09.tampilInformasi();
+            node.data.tampilInformasi();
             traverseInOrder(node.right);
         }
     }
 
     public void traverPostOrder(Node09 node) {
         if (node != null) {
-            traversePostOrder(node.left);
-            traversePostOrder(node.right);
-            node.mahasiswa09.tampilInformasi();
+            traverPostOrder(node.left);
+            traverPostOrder(node.right);
+            node.data.tampilInformasi();
         }
     }
 
-    Node09 getSuccessor(Node09 node) {
+    Node09 getSuccessor(Node09 del) {
         Node09 successor = del.right;
         Node09 successorParent = del;
         while (successor.left != null) {
@@ -100,9 +100,9 @@ public class BinaryTree09 {
         Node09 current = root;
         boolean isLeftChild = false;
         while (current != null) {
-            if (current.mahasiswa09.ipk == ipk) {
+            if (current.data.ipk == ipk) {
                 break;
-            } else if (ipk < current.mahasiswa09.ipk) {
+            } else if (ipk < current.data.ipk) {
                 parent = current;
                 current = current.left;
                 isLeftChild = true;
@@ -144,7 +144,7 @@ public class BinaryTree09 {
             } else {
                 Node09 successor = getSuccessor(current);
                 System.out.println("Jika 2 anak, current = ");
-                successor.mahasiswa09.tampilInformasi();
+                successor.data.tampilInformasi();
                 if (current == root) {
                     root = successor;
                 } else {

@@ -33,7 +33,7 @@ public class BinaryTreeMain09 {
         System.out.println("\nPre order Traversal:");
         bat.traversePreOrder(bat.root);
         System.out.println("\nPost order Traversal:");
-        bat.traversePostOrder(bat.root);
+        bat.traverPostOrder(bat.root);
 
         System.out.println("\nPenghapusan data mahasiswa:");
         bat.delete(3.57);
