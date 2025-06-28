@@ -69,10 +69,10 @@ public class BinaryTree09 {
         }
     }
 
-    public void traverPostOrder(Node09 node) {
+    public void traversePostOrder(Node09 node) {
         if (node != null) {
-            traverPostOrder(node.left);
-            traverPostOrder(node.right);
+            traversePostOrder(node.left);
+            traversePostOrder(node.right);
             node.data.tampilInformasi();
         }
     }

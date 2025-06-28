@@ -13,14 +13,14 @@ public class BinaryTreeMain09 {
         bat.add(new Mahasiswa09("244160220", "Dewi", "B", 3.54));
 
         System.out.println("\nDaftar semua mahasiswa (in order traversal):");
-        bat.traversePreOrder(bat.root);
+        bat.traverseInOrder(bat.root);
 
         System.out.println("\nPencarian data mahasiswa:");
         System.out.print("Cari mahasiswa dengan ipk: 3.54 : ");
         String hasilCari = bat.find(3.54) ? "Ditemukan" : "Tidak ditemukan";
         System.out.println(hasilCari);
 
-        System.out.println("Cari mahasiswa dengan ipk: 3.22 : ");
+        System.out.print("Cari mahasiswa dengan ipk: 3.22 : ");
         hasilCari = bat.find(3.22) ? "Ditemukan" : "Tidak ditemukan";
         System.out.println(hasilCari);
 
@@ -33,7 +33,7 @@ public class BinaryTreeMain09 {
         System.out.println("\nPre order Traversal:");
         bat.traversePreOrder(bat.root);
         System.out.println("\nPost order Traversal:");
-        bat.traverPostOrder(bat.root);
+        bat.traversePostOrder(bat.root);
 
         System.out.println("\nPenghapusan data mahasiswa:");
         bat.delete(3.57);
