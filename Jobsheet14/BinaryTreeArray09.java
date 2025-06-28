@@ -23,4 +23,26 @@ public class BinaryTreeArray09 {
             }
         }
     }
+
+
+    //Tugas 4
+    public BinaryTreeArray09(int size) {
+        dataMahasiswa09 = new Mahasiswa09[size];
+        idxLast = -1;
+    }
+
+    public void add(Mahasiswa09 mhs) {
+        if (idxLast < dataMahasiswa09.length - 1) {
+            dataMahasiswa09[++idxLast] = mhs;
+        }
+    }
+
+    public void traversePreOrder(int idx) {
+        if (idx <= idxLast && dataMahasiswa09[idx] != null) {
+            dataMahasiswa09[idx].tampilInformasi();
+            traversePreOrder(2 * idx + 1);
+            traversePreOrder(2 * idx + 2);
+        }
+    }
 }
+

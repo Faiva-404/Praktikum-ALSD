@@ -158,4 +158,56 @@ public class BinaryTree09 {
             }
         }
     }
+
+    //Tugas 1
+    public void addRekursif(Mahasiswa09 data) {
+        root = addRekursif(root, data);
+    }
+
+    private Node09 addRekursif(Node09 current, Mahasiswa09 data) {
+        if (current == null) {
+            return new Node09(data);
+        }
+        if (data.ipk < current.data.ipk) {
+            current.left = addRekursif(current.left, data);
+        } else {
+            current.right = addRekursif(current.right, data);
+        }
+        return current;
+    }
+
+    //Tugas 2
+    public Mahasiswa09 cariMinIPK() {
+        if (root == null) return null;
+        Node09 current = root;
+        while (current.left != null) {
+            current = current.left; 
+        }
+        return current.data;
+    }
+
+    public Mahasiswa09 cariMaxIPK() {
+        if (root == null) return null;
+        Node09 current = root;
+        while (current.right != null) {
+            current = current.right; 
+        }
+        return current.data;
+    }
+
+
+    //Tugas 3
+    public void tampilMahasiswaIPKdiAtas(double ipkBatas) {
+        tampilMahasiswaIPKdiAtas(root, ipkBatas);
+        }
+
+    private void tampilMahasiswaIPKdiAtas(Node09 node, double ipkBatas) {
+        if (node != null) {
+            tampilMahasiswaIPKdiAtas(node.left, ipkBatas);
+            if (node.data.ipk > ipkBatas) {
+                node.data.tampilInformasi();
+            }
+            tampilMahasiswaIPKdiAtas(node.right, ipkBatas);
+        }
+    }
 }
